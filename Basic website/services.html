@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            width: 100vw;
+            display: grid;
+            grid-template-rows: repeat(6,auto);
+        }
+        .header
+        {
+            background-image: url(image/servies.jpg);
+            background-size: cover;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+            
+        }
+        .header h1
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 24px;
+            padding: 20px;
+        }
+        .navbar
+        {
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(5,auto);
+            justify-content: end;
+            gap: 20px;
+            align-items: center;
+        }
+        .navbar a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .header p
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 160px;
+            gap: 10px;
+            margin-left: 80px;
+        }
+        .header h2
+        {
+            color: white;
+            margin-top: 220px;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 35px;
+            padding: 30px;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .banner
+        {
+            background-color: rgb(41, 39, 39);
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .banner p
+        {
+            color: white;
+            padding: 25px;
+            margin-left: 120px;
+            font-size: 25px;
+        }
+        .banner h2
+        {
+            color: white;
+            font-size: 45px;
+            margin-left: 145px;
+            
+        }
+        .banner .box1 p
+        {
+            text-align: justify;
+            margin-left: 30px;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .banner .box1 h3
+        {
+            color: white;
+            margin-top: 280px;
+            margin-left: 40px;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma;
+            padding: 10px;
+        }
+        .banner table
+        {
+            color: white;
+            margin-left: 90px;
+            padding: 25px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma;
+        }
+        .content
+        {
+            width: 100%;
+            background-color: rgb(13, 13, 13);
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(3,auto);
+            gap: 25px;
+            padding: 25px 100px;
+        }
+        .content .box1
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box1 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box1 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+
+        .content .box2
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: coral;
+        }
+        .content .box2 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box2 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+
+        .content .box3
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: coral;
+        }
+        .content .box3 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box3 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+
+        .content .box4
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box4 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box4 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+
+        .content .box5
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box5 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box5 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+
+        .content .box6
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: coral;
+        }
+        .content .box6 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box6 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+       .content .box7
+        {
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            gap: 25px;
+            padding: 25px;
+        }
+        .content .box7 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 5px;
+            padding: 5px;
+            color: white;
+        }
+        .content .box7 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content button
+        {
+            color: white;
+            background-color: black;
+            border: solid 1px white;
+            width: 200px;
+            padding: 10px;
+        }
+
+
+
+        .meeting
+        {
+            background-color: rgb(27, 25, 25);
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 25px;
+            gap: 20px;
+        }
+        .meeting .follow
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 25px;
+            margin-left: 80px;
+
+        }
+        .meeting .follow p
+        {
+            color: white;
+            font-size: 15px;
+        }
+        .meeting .contact p
+        {
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            line-height: 2;
+        }
+        .meeting .contact h2
+        {
+            color: white;
+            line-height: 3;
+        }
+        .footer
+        {
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+        .footer p
+        {
+            color: white;
+            padding: 25px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Advertising <br>Agency</h1>    
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="porfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p> Services </p> 
+        <h2>Since Our Earliest Days lorem <br>ipsum dolor sit amet, elit. 
+            Ut <br>elit tellus, luctus, erat sed <br>fermentum feugiat.
+        </h2>
+    </div>
+    
+    <div class="banner">
+        <div class="box">
+        <p>What We Do</p>
+        <h2>We work on <br>awesome projects <br>with etiam sed <br>pharetra.</h2>
+        </div>
+
+        <div class="box1">
+            <h3>Digital Experiences</h3>
+            <p>Proin gravida nibh vel velit auctor aliquet. 
+            Aenean <br>sollicitudin, lorem quis bibendum auctor, nisi elit <br>consequat ipsum, 
+            nec sagittis sem nibh id elit. Duis <br>sed odio sit amet nibh vulputate cursus a sit 
+            amet <br>mauris.</p>
+            <table>
+                <ul>
+                    <tr>
+                        <td>Great Design</td>
+                    </tr>
+                    <tr>
+                        <td>Experience</td>
+                    </tr>
+                    <tr>
+                        <td>Value</td>
+                    </tr>
+                </ul>
+            </table>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box1">
+            <h2>Marketing Strategy<br>01</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex sit quaerat soluta dolorum dignissimos commodi dolore tenetur atque vero odio.
+            </p>
+        </div>
+
+        <div class="box2">
+            <h2>Marketing Strategy<br>02</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aut nam blanditiis quasi sed vitae.
+            </p>
+        </div>
+
+        <div class="box3">
+            <h2>Marketing Strategy<br>03</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nemo eveniet consectetur ea dolore molestias. Itaque consequatur laboriosam aspernatur modi.
+            </p>
+        </div>
+
+        <div class="box4">
+            <h2>Marketing Strategy<br>04</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae blanditiis quos totam saepe? Debitis ducimus nam minus ea accusantium sed?
+            </p>
+        </div>
+
+        <div class="box5">
+            <h2>Marketing Strategy<br>05</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eius excepturi itaque inventore, quas incidunt omnis impedit adipisci sed assumenda.
+            </p>
+        </div>
+
+        <div class="box6">
+            <h2>Marketing Strategy<br>06</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, magni. Molestias aut eius voluptates ad esse eveniet nulla, nesciunt iste, rem eaque expedita qui saepe?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam officiis harum, architecto nobis consequatur amet maxime eos minus incidunt et?
+            </p>
+        </div>
+        <div class="box7">
+            <p>Vision & Innovation</p>
+
+            <h2>We merge Advertising and <br>Marketing to engage lorem ipsum <br>dolor sit amet, consectetur elit.</h2>
+
+            <button>GET IN TOUCH</button>
+        </div>    
+    </div>
+    <div class="meeting">
+        <div class="follow">
+        <p>FOLLOW US</p>
+        <h2>Pinterest<br>
+            Facebook<br>
+            Dribbble<br>
+            Twitter<br>
+            Behance<br>
+            YouTube</h2>
+        </div>
+        <div class="contact">
+            <p>Contact</p>
+            <h2>New York</h2>
+            <p> MBDA Business Center<br>
+                13 Fifth Avenue, New York, NY 10160<br>
+                929-242-6868<br>
+                contact@example.com
+            </p>
+            
+            <h2>Paris</h2>
+            <p> La Défense Business Center<br>
+                Av. Des Champs-Élysées, Paris, 75008<br>
+                333-101-5454<br>
+                hello@example.com
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2025 Media Agency | Powered by Media Agency</p>
+    </div>
+</body>
+</html>
+
+

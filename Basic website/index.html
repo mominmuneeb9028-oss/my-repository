@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            width: 100vw;
+            display: grid;
+            grid-template-rows: repeat(6,auto);
+            background-image: url(image/index.jpg);
+            background-size: cover;
+            background-position: 0px 1300px;
+        }
+        .header
+        {
+
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .header h1
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 24px;
+            padding: 20px;
+        }
+        .navbar
+        {
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(5,auto);
+            justify-content: end;
+            gap: 20px;
+            align-items: center;
+        }
+        .navbar a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .banner
+        {
+            width: 100%;
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            gap: 20px;
+            padding: 25px 100px;
+            margin-bottom: 2px;
+        }
+        .banner p
+        {
+            color: white;
+        }
+        .banner h1
+        {
+            font-size: 80px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            line-height: -1;
+        }
+        .banner button
+        {
+            color: white;
+            background-color: black;
+            border: solid 1px white;
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 100px;
+        }
+
+        .content
+        {
+            width: 100%;
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(2,auto);
+            gap: 20px;
+            padding: 25px 100px;
+        }
+
+        .content .box1
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box1 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box1 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box1 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content .box2
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color:coral;
+        }
+        .content .box2 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box2 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box2 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content .box3
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box3 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box3 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box3 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content .box4
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: coral;
+        }
+        .content .box4 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box4 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box4 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content .box5
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: tomato;
+        }
+        .content .box5 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box5 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box5 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content .box6
+        {
+            display: grid;
+            grid-template-rows: repeat(4,auto);
+            gap: 25px;
+            padding: 25px;
+            background-color: coral;
+        }
+        .content .box6 p
+        {
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma;
+            gap: 25px;
+            padding: 25px;
+            color: white;
+        }
+        .content .box6 h2
+        {
+            font-family: 'Segoe UI', Tahoma;
+            color: white;
+            font-size: 30px;
+        }
+        .content .box6 a
+        {
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content2
+        {
+            width: 100%;
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            gap: 20px;
+            padding: 25px 100px;
+        }
+
+        .content2 .box11
+        {
+            display: grid;
+            grid-template-rows: repeat(3,auto);
+            padding: 25px;
+            gap: 20px;
+
+        }
+        .content2 .box11 h2
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            font-size: 40px;
+        }
+        .content2 .box11 p
+        {
+            color: white;
+            font-family: 'Segoe UI', Tahoma;
+            text-align: justify;
+        }
+        .content2 .box11 a
+        {
+            color: white;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma;
+        }
+
+        .content3
+        {
+            width: 100%;
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(4,250px);
+            grid-template-rows: repeat(4,200px);
+            gap: 20px;
+            padding: 30px;
+            margin-right: 40px;
+        }
+        .content3 .box13
+        {
+            background-image: url(image/belli.jpg);
+            background-size: cover;
+            color: white;
+        }
+        .content3 .box13 p
+        {
+            font-size: px;
+        }
+        .footer
+        {
+            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+        .footer p
+        {
+            color: white;
+            padding: 25px;
+       
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Advertising <br>Agency</h1>     
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="porfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="banner">
+        <p>ADVERTISING & MARKETING AGENCY</p>
+        <h1>We helps <br>brands Grow <br>Beautifully</h1>
+
+        <button>GET STARTED NOW</button>
+    </div>
+    <div class="content">
+        <div class="box1">
+            <img src="image/monitor.png" width="30px">
+            <h2>Marketing <br>Strategy</h2>
+            <p>01</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="box2">
+            <img src="image/web-research.png" width="30px">
+            <h2>Research & <br>Planning</h2>
+            <p>02</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="box3">
+            <img src="image/bhuko.png" width="40px">
+            <h2>Full Funnel <br>Build</h2>
+            <p>03</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="box4">
+            <img src="image/earning.png" width="30px">
+            <h2>Digital <br>Advertising</h2>
+            <p>04</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="box5">
+            <img src="image/smartphone.png" width="30px">
+            <h2>Brand <br>Building</h2>
+            <p>05</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="box6">
+            <img src="image/search1.png" width="30px">
+            <h2>Media <br>Strategy</h2>
+            <p>06</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsum soluta sequi repudiandae.</p>
+            <a href="#">READ MORE</a>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="box11">
+            <h2>We are an <br>Advertising & <br>Marketing firm erat <br>sed fermentum.</h2>
+            <p>Sed non mauris vitae erat consequat auctor eu in elit. 
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+            <a href="#">READ MORE</a>
+        </div>
+        <div class="box12">
+            <img src="image/meeting.jpg" width="600px">
+        </div>
+    </div>
+
+    </div>
+    <div class="footer">
+        <p>Copyright © 2025 Media Agency | Powered by Media Agency</p>
+        
+    </div>
+</body>
+</html>
